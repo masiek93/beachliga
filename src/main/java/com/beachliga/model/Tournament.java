@@ -19,9 +19,9 @@ public class Tournament {
 	private Integer cost;
 	private String drawType;
 	private String specialInformation;
-	private Organizer organizer;
-	private List<Player> registredPlayers;
-	private List<Player> finalClassification;
+	//private Organizer organizer;
+	//private List<Player> registredPlayers;
+	//private List<Player> finalClassification;
 	
 	public Tournament() {}
 	
@@ -33,7 +33,7 @@ public class Tournament {
 		this.city = city;
 	}
 
-	public Tournament(Integer id, String name, String date, String city, String localization,
+/*	public Tournament(Integer id, String name, String date, String city, String localization,
 			LocalDateTime registrationDeadline, Integer cost, String drawType, String specialInformation,
 			Organizer organizer, List<Player> registredPlayers, List<Player> finalClassification) {
 		super();
@@ -49,7 +49,7 @@ public class Tournament {
 		this.organizer = organizer;
 		this.registredPlayers = registredPlayers;
 		this.finalClassification = finalClassification;
-	}
+	}*/
 
 	public Integer getId() {
 		return id;
@@ -105,6 +105,7 @@ public class Tournament {
 	public void setSpecialInformation(String specialInformation) {
 		this.specialInformation = specialInformation;
 	}
+	/*
 	public Organizer getOrganizer() {
 		return organizer;
 	}
@@ -122,6 +123,6 @@ public class Tournament {
 	}
 	public void setFinalClassification(List<Player> finalClassification) {
 		this.finalClassification = finalClassification;
-	}
+	}*/
 	
 }

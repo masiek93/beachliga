@@ -17,36 +17,34 @@ public class TournamentService {
 	private TournamentRepository tournamentRepository;
 	
 	
-	private List<Tournament> tournaments = new ArrayList<>(Arrays.asList(
+/*	used only for testing
+ * 
+ * private List<Tournament> tournaments = new ArrayList<>(Arrays.asList(
 			new Tournament(1, "first", "Valencia"),
 			new Tournament(2, "second", "Alicante")
-			));
+			));*/
 	
 	public List<Tournament> getAllTournaments(){
-		return tournaments;
+		List<Tournament> tournamentList = new ArrayList<Tournament>();
+		tournamentRepository.findAll().forEach(tournamentList::add);
+		
+		return tournamentList;
 	}
 	
 	public Tournament getTournamentById(Integer id){
-		return tournaments.stream().filter(t -> t.getId().equals(id)).findFirst().get();
+		return tournamentRepository.findOne(id);
 	}
 	
 	public void addTournament(Tournament tournament){
-		tournaments.add(tournament);
+		tournamentRepository.save(tournament);
 	}
 	
 	public void updateTournament(Integer id, Tournament tournament){
-		Tournament t;
-		for(int i=0; i<tournaments.size(); i++){
-			t = tournaments.get(i);
-			if(t.getId().equals(id)){
-				tournaments.set(i, tournament);
-				return;
-			}
-		}
+		tournamentRepository.save(tournament);
 	}
 
 	public void deleteTournament(Integer id) {
-		tournaments.removeIf(t -> t.getId().equals(id));
+		tournamentRepository.delete(id);
 	}
 	
 }

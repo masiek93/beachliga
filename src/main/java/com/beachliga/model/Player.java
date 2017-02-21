@@ -18,7 +18,7 @@ public class Player {
 	private LocalDateTime joinDate;
 	private Integer totalGenderPoints;
 	private Integer totalMixedPoints;
-	private Map<String, Integer> classificationList;
+	//private Map<String, Integer> classificationList;
 	
 	public Player(){}
 	
@@ -110,13 +110,13 @@ public class Player {
 		this.totalMixedPoints = totalMixedPoints;
 	}
 
-	public Map<String, Integer> getClassificationList() {
+/*	public Map<String, Integer> getClassificationList() {
 		return classificationList;
 	}
 
 	public void setClassificationList(Map<String, Integer> classificationList) {
 		this.classificationList = classificationList;
 	}
-	
+	*/
 	
 }
