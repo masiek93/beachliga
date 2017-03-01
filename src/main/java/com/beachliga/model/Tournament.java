@@ -13,8 +13,7 @@ public class Tournament {
 	private Integer id;
 	private String name;
 	private String date;
-	private String city;
-	private String localization; //to think about
+	//private Address address;
 	private LocalDateTime registrationDeadline;
 	private Integer cost;
 	private String drawType;
@@ -26,30 +25,11 @@ public class Tournament {
 	public Tournament() {}
 	
 	//only for tests
-	public Tournament(Integer id, String name, String city) {
+	public Tournament(Integer id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.city = city;
 	}
-
-/*	public Tournament(Integer id, String name, String date, String city, String localization,
-			LocalDateTime registrationDeadline, Integer cost, String drawType, String specialInformation,
-			Organizer organizer, List<Player> registredPlayers, List<Player> finalClassification) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.date = date;
-		this.city = city;
-		this.localization = localization;
-		this.registrationDeadline = registrationDeadline;
-		this.cost = cost;
-		this.drawType = drawType;
-		this.specialInformation = specialInformation;
-		this.organizer = organizer;
-		this.registredPlayers = registredPlayers;
-		this.finalClassification = finalClassification;
-	}*/
 
 	public Integer getId() {
 		return id;
@@ -68,18 +48,6 @@ public class Tournament {
 	}
 	public void setDate(String date) {
 		this.date = date;
-	}
-	public String getCity() {
-		return city;
-	}
-	public void setCity(String city) {
-		this.city = city;
-	}
-	public String getLocalization() {
-		return localization;
-	}
-	public void setLocalization(String localization) {
-		this.localization = localization;
 	}
 	public LocalDateTime getRegistrationDeadline() {
 		return registrationDeadline;
@@ -105,24 +73,5 @@ public class Tournament {
 	public void setSpecialInformation(String specialInformation) {
 		this.specialInformation = specialInformation;
 	}
-	/*
-	public Organizer getOrganizer() {
-		return organizer;
-	}
-	public void setOrganizer(Organizer organizer) {
-		this.organizer = organizer;
-	}
-	public List<Player> getRegistredPlayers() {
-		return registredPlayers;
-	}
-	public void setRegistredPlayers(List<Player> registredPlayers) {
-		this.registredPlayers = registredPlayers;
-	}
-	public List<Player> getFinalClassification() {
-		return finalClassification;
-	}
-	public void setFinalClassification(List<Player> finalClassification) {
-		this.finalClassification = finalClassification;
-	}*/
 	
 }

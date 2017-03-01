@@ -4,43 +4,48 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.beachliga.model.Player;
+import com.beachliga.repository.PlayerRepository;
 
 @Service
 public class PlayerService {
+	
+	@Autowired
+	private PlayerRepository playerRepository;
 
-	private List<Player> players = new ArrayList<>(Arrays.asList(
+/*	only for tests
+ * 
+ * private List<Player> players = new ArrayList<>(Arrays.asList(
 			new Player(1, "Manuel", "Schmidt"),
 			new Player(2, "Junior", "Marim")
 			));
+			
+	remove it later		
+	*/
 	
 	public List<Player> getAllPlayers(){
-		return players;
+		List<Player> playerList = new ArrayList<Player>();
+		playerRepository.findAll().forEach(playerList::add);
+		return playerList;
 	}
 	
 	public Player getPlayerById(Integer id){
-		return players.stream().filter(p -> p.getId().equals(id)).findFirst().get();
+		return playerRepository.findOne(id);
 	}
 	
 	public void addPlayer(Player player){
-		players.add(player);
+		playerRepository.save(player);
 	}
 	
 	public void updatePlayer(Integer id, Player player){
-		Player p;
-		for(int i=0; i<players.size(); i++){
-			p = players.get(i);
-			if(p.getId().equals(id)){
-				players.set(i, player);
-				return;
-			}
-		}
+		playerRepository.save(player);
 	}
 
 	public void deletePlayer(Integer id) {
-		players.removeIf(p -> p.getId().equals(id));
+		playerRepository.delete(id);
 	}
 	
 

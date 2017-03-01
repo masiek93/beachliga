@@ -13,18 +13,18 @@ import org.springframework.web.bind.annotation.RestController;
 import com.beachliga.model.Tournament;
 import com.beachliga.service.TournamentService;
 
-@RestController
+@Controller
 public class TournamentController {
 	
 	@Autowired
 	private TournamentService tournamentService;
     
-	@RequestMapping("/tournaments")
+	@RequestMapping(method=RequestMethod.GET, value="/tournaments")
     public List<Tournament> showTournamentList() {
         return tournamentService.getAllTournaments();
     }
     
-	@RequestMapping("/tournaments/{id}")
+	@RequestMapping(method=RequestMethod.GET, value="/tournaments/{id}")
     public Tournament showTournamentById(@PathVariable String id) {
     	return tournamentService.getTournamentById(Integer.parseInt(id));
     }
