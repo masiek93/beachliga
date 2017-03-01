@@ -3,42 +3,42 @@ package com.beachliga.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.beachliga.model.Player;
 import com.beachliga.service.PlayerService;
 
-@RestController
+@Controller
 public class PlayerController {
 	
 	@Autowired
 	private PlayerService playerService;
     
-	@RequestMapping("/players")
+	@RequestMapping(value="/players", method=RequestMethod.GET)
     public List<Player> showPlayerList() {
         return playerService.getAllPlayers();
     }
     
-	@RequestMapping("/players/{id}")
+	@RequestMapping(value="/players/{id}", method=RequestMethod.GET)
     public Player showPlayerById(@PathVariable String id) {
     	return playerService.getPlayerById(Integer.parseInt(id));
     }
 	
-	@RequestMapping(method=RequestMethod.POST, value="/players")
+	@RequestMapping(value="/players", method=RequestMethod.POST)
 	public void addPlayer(@RequestBody Player player){
 		playerService.addPlayer(player);
 	}
 	
-	@RequestMapping(method=RequestMethod.PUT, value="/players/{id}")
+	@RequestMapping(value="/players/{id}", method=RequestMethod.PUT)
 	public void updatePlayer(@RequestBody Player player, @PathVariable String id){
 		playerService.updatePlayer(Integer.parseInt(id), player);
 	}
 	
-	@RequestMapping(method=RequestMethod.DELETE, value="/players/{id}")
+	@RequestMapping(value="/players/{id}", method=RequestMethod.DELETE)
 	public void deletePlayer(@PathVariable String id){
 		playerService.deletePlayer(Integer.parseInt(id));
 	}

@@ -19,27 +19,27 @@ public class TournamentController {
 	@Autowired
 	private TournamentService tournamentService;
     
-	@RequestMapping(method=RequestMethod.GET, value="/tournaments")
+	@RequestMapping(value="/tournaments", method=RequestMethod.GET)
     public List<Tournament> showTournamentList() {
         return tournamentService.getAllTournaments();
     }
     
-	@RequestMapping(method=RequestMethod.GET, value="/tournaments/{id}")
+	@RequestMapping(value="/tournaments/{id}", method=RequestMethod.GET)
     public Tournament showTournamentById(@PathVariable String id) {
     	return tournamentService.getTournamentById(Integer.parseInt(id));
     }
 	
-	@RequestMapping(method=RequestMethod.POST, value="/tournaments")
+	@RequestMapping(value="/tournaments", method=RequestMethod.POST)
 	public void addTournament(@RequestBody Tournament tournament){
 		tournamentService.addTournament(tournament);
 	}
 	
-	@RequestMapping(method=RequestMethod.PUT, value="/tournaments/{id}")
+	@RequestMapping(value="/tournaments/{id}", method=RequestMethod.PUT)
 	public void updateTournament(@RequestBody Tournament tournament, @PathVariable String id){
 		tournamentService.updateTournament(Integer.parseInt(id), tournament);
 	}
 	
-	@RequestMapping(method=RequestMethod.DELETE, value="/tournaments/{id}")
+	@RequestMapping(value="/tournaments/{id}", method=RequestMethod.DELETE)
 	public void deleteTournament(@PathVariable String id){
 		tournamentService.deleteTournament(Integer.parseInt(id));
 	}
