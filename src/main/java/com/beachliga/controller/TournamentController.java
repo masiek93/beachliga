@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,8 +21,9 @@ public class TournamentController {
 	private TournamentService tournamentService;
     
 	@RequestMapping(value="/tournaments", method=RequestMethod.GET)
-    public List<Tournament> showTournamentList() {
-        return tournamentService.getAllTournaments();
+    public String showTournamentList(Model model) {
+		model.addAttribute("tournamentList", tournamentService.getAllTournaments());
+        return "tournaments_list";
     }
     
 	@RequestMapping(value="/tournaments/{id}", method=RequestMethod.GET)
