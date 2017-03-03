@@ -1,8 +1,6 @@
 package com.beachliga.model;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -42,14 +40,20 @@ public class Tournament {
 	 * TODO check how to represent colletions in hibernate 
 	 * private HashMap<Integer, Player> finalClassification;
 	 */
+	
 	public Tournament() {
 	}
 
-	// only for tests
-	public Tournament(long id, String name) {
+	public Tournament(String name, String date, Address address, LocalDateTime registrationDeadline, Integer cost,
+			String specialInformation, Organiser organiser) {
 		super();
-		this.id = id;
 		this.name = name;
+		this.date = date;
+		this.address = address;
+		this.registrationDeadline = registrationDeadline;
+		this.cost = cost;
+		this.specialInformation = specialInformation;
+		this.organiser = organiser;
 	}
 
 	public long getId() {

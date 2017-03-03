@@ -1,4 +1,4 @@
-package com.beachliga.repository;
+package com.beachliga.dao;
 
 import org.springframework.data.repository.CrudRepository;
 
