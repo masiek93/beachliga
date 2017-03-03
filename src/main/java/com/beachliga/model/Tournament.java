@@ -3,6 +3,7 @@ package com.beachliga.model;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -35,7 +36,7 @@ public class Tournament {
 
 	@OneToMany
 	@JoinTable(name = "tournament_players")
-	private ArrayList<Player> registredPlayers;
+	private List<Player> registredPlayers;
 
 	/*
 	 * TODO check how to represent colletions in hibernate 
@@ -123,11 +124,11 @@ public class Tournament {
 		this.organiser = organiser;
 	}
 
-	public ArrayList<Player> getRegistredPlayers() {
+	public List<Player> getRegistredPlayers() {
 		return registredPlayers;
 	}
 
-	public void setRegistredPlayers(ArrayList<Player> registredPlayers) {
+	public void setRegistredPlayers(List<Player> registredPlayers) {
 		this.registredPlayers = registredPlayers;
 	}
 

@@ -1,6 +1,7 @@
 package com.beachliga.model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinTable;
@@ -12,14 +13,18 @@ import com.beachliga.abstraction.User;
 public class Organiser extends User {
 	
 	@OneToMany
-	@JoinTable(name = "organiser_tournament")
-	private ArrayList<Tournament> organisedTournaments;
+	@JoinTable(name = "organiser_tournaments")
+	/*												  
+	 * TODO find how to give colum names to jointable 
+		joinColumns="tournament_id", inverseJoinColumns="organiser_id"
+	 */	
+	private List<Tournament> organisedTournaments;
 
-	public ArrayList<Tournament> getOrganisedTournaments() {
+	public List<Tournament> getOrganisedTournaments() {
 		return organisedTournaments;
 	}
 
-	public void setOrganisedTournaments(ArrayList<Tournament> organisedTournaments) {
+	public void setOrganisedTournaments(List<Tournament> organisedTournaments) {
 		this.organisedTournaments = organisedTournaments;
 	}
 
