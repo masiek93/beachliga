@@ -14,3 +14,19 @@ body {
   color: #fff;
   background-color: #3eafff;
 }
+
+@media (min-width: 768px) {
+  .container {
+    width: 550px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 770px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}

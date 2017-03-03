@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Thomas Bartnik">
     <!-- <link rel="icon" href="../../favicon.ico">  -->
 
     <title>BeachLiga - Beach Volleyball </title>
@@ -41,12 +41,33 @@
           </button>
           <a class="navbar-brand" href="#"><font style="font-size:30px; color:#3eafff" >Beach</font><font style="font-size:30px; color:#ffa93e">Liga</font></a>
         </div>
-        <div id="navbar" class="nav navbar-nav navbar-right">
+         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="tournaments">Tournaments</a></li>
+            <li class="dropdown">
+              <a href="tournaments" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tournaments<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">All Tournaments</a></li>
+                <li><a href="#">Info</a></li>
+                <li><a href="#">Statistics</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">History</li>
+                <li><a href="#">2016</a></li>
+                <li><a href="#">2015</a></li>
+                <li><a href="#">Before</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="players" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Players<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">All Players</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Woman</a></li>
+              </ul>
+            </li>
+            <!-- <li><a href="tournaments">Tournaments</a></li>
             <li><a href="players">Players</a></li>
-<!--             <li class="dropdown">
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Action</a></li>
@@ -59,12 +80,10 @@
               </ul>
             </li> -->
           </ul>
-         <!--  <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
-            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
-          </ul> -->
-        </div><!--/.nav-collapse -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Log in</a></li>
+        </div>
       </div>
     </nav>
 
