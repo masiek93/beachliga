@@ -37,7 +37,7 @@ public class Tournament {
 	private List<Player> registredPlayers;
 
 	/*
-	 * TODO check how to represent colletions in hibernate 
+	 * TODO check how to represent collections in hibernate 
 	 * private HashMap<Integer, Player> finalClassification;
 	 */
 	

@@ -12,5 +12,22 @@ public class BeachLigaRunnerApplicationTests {
 	@Test
 	public void contextLoads() {
 	}
-
+	
+	// TODO
+	@Test
+	public void testAddingTournament(){
+		
+	}
+	
+	// TODO
+	@Test
+	public void testAddingPlayer(){
+		
+	}
+	
+	//TODO
+	@Test 
+	public void testAddingAddress(){
+		
+	}
 }

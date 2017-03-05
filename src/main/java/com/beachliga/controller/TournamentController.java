@@ -20,7 +20,7 @@ public class TournamentController {
 	@RequestMapping(value="/tournaments", method=RequestMethod.GET)
     public String showTournamentList(Model model) {
 		model.addAttribute("tournamentList", tournamentService.getAllTournaments());
-        return "tournaments_list";
+        return "tournaments_all";
     }
     
 	@RequestMapping(value="/tournaments/{id}", method=RequestMethod.GET)
