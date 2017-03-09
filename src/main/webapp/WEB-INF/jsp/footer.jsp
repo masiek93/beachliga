@@ -8,14 +8,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <h2 class="logo"><a href="#"> LOGO </a></h2>
+                    <img src="images/logo_beachliga_2_grey_mini_2.png" alt="LOGO" style="margin-top:20px;"/><!-- <h2 class="logo"><a href="#"> LOGO </a></h2> --> <!-- height="135" width="188" -->
                 </div>
                 <div class="col-sm-2">
-                    <h5>Get started</h5>
+                    <h5>Web Map</h5>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Downloads</a></li>
+                        <li><a href="#">Tournaments</a></li>
+                        <li><a href="#">Players</a></li>
+                        <li><a href="#">Ranking</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-2">
@@ -23,15 +24,13 @@
                     <ul>
                         <li><a href="#">Company Information</a></li>
                         <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-2">
                     <h5>Support</h5>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
+                        <li><a href="#">Help</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">

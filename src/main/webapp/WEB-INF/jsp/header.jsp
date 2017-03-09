@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><font style="font-size:30px; color:#3eafff" >Beach</font><font style="font-size:30px; color:#ffa93e">Liga</font></a>
+          <a class="navbar-brand" href="/"><img src="images/logo_beachliga_2_mini_2.png" alt="LOGO" /> <!-- height="72" width="100" --><!-- <font style="font-size:30px; color:#3eafff" >Beach</font><font style="font-size:30px; color:#ffa93e">Liga</font> --></a>
         </div>
          <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -52,6 +52,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Register</a></li>
             <li><a href="#">Log in</a></li>
+          </ul>
         </div>
       </div>
     </nav>
