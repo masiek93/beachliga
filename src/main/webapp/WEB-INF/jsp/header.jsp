@@ -51,7 +51,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Register</a></li>
-            <li><a href="#">Log in</a></li>
+            <li><a href="log_in">Log in</a></li>
           </ul>
         </div>
       </div>

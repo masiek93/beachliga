@@ -12,4 +12,9 @@ public class MainController {
         return "index";
     }
     
+    @RequestMapping(value="/log_in", method=RequestMethod.GET)
+    public String login() {
+        return "log_in";
+    }
+    
 }
