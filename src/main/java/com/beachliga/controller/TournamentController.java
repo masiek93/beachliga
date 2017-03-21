@@ -22,6 +22,11 @@ public class TournamentController {
 		model.addAttribute("tournamentList", tournamentService.getAllTournaments());
         return "tournaments_all";
     }
+	
+	@RequestMapping(value="/tournaments/add", method=RequestMethod.GET)
+    public String addTournament(Model model) {
+        return "tournaments_add";
+    }
     
 	@RequestMapping(value="/tournaments/{id}", method=RequestMethod.GET)
     public Tournament showTournamentById(@PathVariable String id) {

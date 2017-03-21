@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <img src="images/logo_beachliga_2_grey_mini_2.png" alt="LOGO" style="margin-top:20px;"/><!-- <h2 class="logo"><a href="#"> LOGO </a></h2> --> <!-- height="135" width="188" -->
+                    <img src="/images/logo_beachliga_2_grey_mini_2.png" alt="LOGO" style="margin-top:20px;"/><!-- <h2 class="logo"><a href="#"> LOGO </a></h2> --> <!-- height="135" width="188" -->
                 </div>
                 <div class="col-sm-2">
                     <h5>Web Map</h5>
