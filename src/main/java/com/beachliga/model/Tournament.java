@@ -17,7 +17,7 @@ import javax.persistence.OneToOne;
 public class Tournament {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private Long id;
 	private String name;
 	private String date;
 
@@ -30,11 +30,11 @@ public class Tournament {
 	private String specialInformation;
 
 	@ManyToOne
-	private Organiser organiser;
+	private User organiser;
 
 	@OneToMany
 	@JoinTable(name = "tournament_players")
-	private List<Player> registredPlayers;
+	private List<User> registredPlayers;
 
 	/*
 	 * TODO check how to represent collections in hibernate 
@@ -45,7 +45,7 @@ public class Tournament {
 	}
 
 	public Tournament(String name, String date, Address address, LocalDateTime registrationDeadline, Integer cost,
-			String specialInformation, Organiser organiser) {
+			String specialInformation, User organiser) {
 		super();
 		this.name = name;
 		this.date = date;
@@ -56,11 +56,11 @@ public class Tournament {
 		this.organiser = organiser;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -120,19 +120,19 @@ public class Tournament {
 		this.specialInformation = specialInformation;
 	}
 
-	public Organiser getOrganiser() {
+	public User getOrganiser() {
 		return organiser;
 	}
 
-	public void setOrganiser(Organiser organiser) {
+	public void setOrganiser(User organiser) {
 		this.organiser = organiser;
 	}
 
-	public List<Player> getRegistredPlayers() {
+	public List<User> getRegistredPlayers() {
 		return registredPlayers;
 	}
 
-	public void setRegistredPlayers(List<Player> registredPlayers) {
+	public void setRegistredPlayers(List<User> registredPlayers) {
 		this.registredPlayers = registredPlayers;
 	}
 
