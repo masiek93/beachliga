@@ -16,11 +16,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 			.authorizeRequests()
-				.antMatchers("/resources/**").permitAll()
+				.antMatchers("/", "/css/**", "/fonts/**", "/js/**", "/images/**").permitAll()
 				.anyRequest().authenticated()
-				.and()
+			.and()
 			.formLogin()
-				//.loginPage("/log_in")
+				.loginPage("/log_in")
 				.permitAll()
 				.and()
 			.logout()
@@ -37,7 +37,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.and()
 				.withUser("user")
 					.password("password")
-					.roles("USER");
+					.roles("USER")
+				.and()
+				.withUser("player@bl.com")
+					.password("password")
+					.roles("PLAYER");;
 	}
 
 }
