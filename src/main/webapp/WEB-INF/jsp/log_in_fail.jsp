@@ -33,7 +33,8 @@
 
       <form class="form-signin">
         <h2 class="form-signin-heading">Please log in</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
+        <h4 class="form-signin-failure">The password or user name is invalid.</h4>
+        <label for="inputEmail" class="sr-only">User name</label>
         <input id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>

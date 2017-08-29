@@ -19,11 +19,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/", "/css/**", "/fonts/**", "/js/**", "/images/**").permitAll()
 				.anyRequest().authenticated()
 			.and()
-			.formLogin()
+				.formLogin()
 				.loginPage("/log_in")
+				.failureUrl("/log_in_fail") //TODO change url to log_in with parameter
 				.permitAll()
-				.and()
-			.logout()
+			.and()
+				.logout()
+				.logoutUrl("/logout")
+				.logoutSuccessUrl("/")
 				.permitAll();
 	}
 	
