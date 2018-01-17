@@ -17,11 +17,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http
 			.authorizeRequests()
 				.antMatchers("/", "/css/**", "/fonts/**", "/js/**", "/images/**").permitAll()
+				.antMatchers("/tournaments/**").hasAnyRole("ADMIN")
 				.anyRequest().authenticated()
 			.and()
 				.formLogin()
 				.loginPage("/log_in")
-				.failureUrl("/log_in_fail") //TODO change url to log_in with parameter
+				//.failureUrl("/log_in_fail") //TODO change url to log_in with parameter
 				.permitAll()
 			.and()
 				.logout()
@@ -34,17 +35,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 		auth
 			.inMemoryAuthentication()
-				.withUser("admin")
-					.password("password")
-					.roles("ADMIN","USER")
+				.withUser("admin").password("password").roles("ADMIN","USER")
 				.and()
-				.withUser("user")
-					.password("password")
-					.roles("USER")
+				.withUser("user").password("password").roles("USER")
 				.and()
-				.withUser("player@bl.com")
-					.password("password")
-					.roles("PLAYER");;
+				.withUser("player@bl.com").password("password").roles("PLAYER");
 	}
 
 }

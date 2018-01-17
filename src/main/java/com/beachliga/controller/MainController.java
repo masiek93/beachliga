@@ -17,4 +17,11 @@ public class MainController {
         return "log_in";
     }
     
+    @RequestMapping(value="/log_out", method=RequestMethod.GET)
+    public String logout() {
+        return "index";
+    }
+    
+    
+    
 }

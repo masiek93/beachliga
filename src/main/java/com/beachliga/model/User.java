@@ -26,6 +26,11 @@ import org.springframework.data.annotation.Transient;
 @Table(name="user")
 public class User implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6931890028599918000L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="user_id")
@@ -61,6 +66,39 @@ public class User implements Serializable {
 	private LocalDateTime joinDate;
 	private Integer totalGenderPoints;
 	private Integer totalMixedPoints;
+	public String getPassword() {
+		return password;
+	}
+
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+
+	public Set<Role> getRoles() {
+		return roles;
+	}
+
+
+
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
+	}
+
+
+
+	public int getActive() {
+		return active;
+	}
+
+
+
+	public void setActive(int active) {
+		this.active = active;
+	}
 	//private Map<String, Integer> classificationList;
 	@OneToMany
 	@JoinTable(name = "user_tournament")
