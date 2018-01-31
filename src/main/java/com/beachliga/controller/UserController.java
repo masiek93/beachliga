@@ -13,7 +13,7 @@ import com.beachliga.service.UserService;
 
 @Controller
 public class UserController {
-	
+	/*
 	@Autowired
 	private UserService userService;
     
@@ -41,5 +41,5 @@ public class UserController {
 	@RequestMapping(value="/players/{id}", method=RequestMethod.DELETE)
 	public void deleteUser(@PathVariable String id){
 		userService.deleteUser(Integer.parseInt(id));
-	}
+	}*/
 }
